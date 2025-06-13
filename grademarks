@@ -1,21 +1,46 @@
+
 public class Main {
     public static void main(String[] args) {
-        int marks = 87; 
+    
+        int[] marks1 = {85, 90, 88, 84};
 
-        if (marks >= 90 && marks <= 100) {
+
+        int[] marks2 = {70, 75, 72, 74};
+
+        System.out.print("Person 1 - ");
+        calculateGrade(marks1);
+
+
+        System.out.print("Person 2 - ");
+        calculateGrade(marks2);
+    }
+
+    public static void calculateGrade(int[] marks) {
+        int total = 0;
+
+        for (int mark : marks) {
+            total += mark;
+        }
+
+        int average = total / 4;
+
+        System.out.print("Average: " + average + " - ");
+
+        if (average >= 90 && average <= 100) {
             System.out.println("Grade: A+");
-        } else if (marks >= 80 && marks <= 89) {
+        } else if (average >= 80 && average <= 89) {
             System.out.println("Grade: A");
-        } else if (marks >= 70 && marks <= 79) {
+        } else if (average >= 70 && average <= 79) {
             System.out.println("Grade: B");
-        } else if (marks >= 60 && marks <= 69) {
+        } else if (average >= 60 && average <= 69) {
             System.out.println("Grade: C");
-        } else if (marks >= 50 && marks <= 59) {
+        } else if (average >= 50 && average <= 59) {
             System.out.println("Grade: D");
-        } else if (marks >= 0 && marks < 50) {
+        } else if (average >= 0 && average < 50) {
             System.out.println("Grade: Fail");
         } else {
             System.out.println("Invalid Marks!");
         }
     }
 }
+
