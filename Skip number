@@ -1,0 +1,11 @@
+public class SkipNumbers {
+    public static void main(String[] args) {
+        int m = 1;  // starting number
+        int n = 20; // ending number
+        int k = 2;  // numbers to skip in between
+
+        for (int i = m; i <= n; i += k + 1) {
+            System.out.print(i + " ");
+        }
+    }
+}
